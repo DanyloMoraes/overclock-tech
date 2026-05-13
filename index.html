@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Overclock Tech - Hardware para Computadores</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <h1>Overclock Tech</h1>
+      <p>O melhor em componentes para o seu PC Gamer</p>
+      <nav>
+        <ul>
+          <li><a href="#">Hardware</a></li>
+          <li><a href="#">Computadores</a></li>
+          <li><a href="#">Periféricos</a></li>
+          <li><a href="#">Blog Overclock</a></li>
+        </ul>
+        <button class="cart-button" type="button">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count">1</span>
+        </button>
+    </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home">
+      <h2>Bem-vindo à Overclock Tech</h2>
+      <p>Encontre processadores, placas de vídeo, memórias RAM, SSDs e muito mais para montar seu PC dos sonhos.</p>
+      <p>Entrega rápida e suporte especializado.</p>
+    </section>
+
+    <section id="produtos">
+      <h2>Produtos em Destaque</h2>
+      <!-- Processador -->
+      <article data-product-page="hardware/processador.html">
+        <img src="https://images.kabum.com.br/produtos/fotos/426260/processador-amd-ryzen-9-7950x3d-5-7ghz-max-turbo-cache-144mb-am5-16-nucleos-video-integrado-100-100000908wof_1676550951_original.jpg" alt="Processador Ryzen 9" />
+        <h3>Processador Ryzen 9</h3>
+        <p>Performance extrema para jogos e criação de conteúdo.</p>
+        <ul>
+          <li>8 núcleos / 16 threads</li>
+          <li>3.8 GHz base / 5.0 GHz turbo</li>
+          <li>Socket AM4</li>
+        </ul>
+        <div class="button-gap">
+          <button type="button">Comprar</button>
+          <button type="button" title="Adicionar ao carrinho"><i class="fas fa-shopping-cart"></i></button>
+        </div>
+        
+      </article>
+      <!-- Placa de Vídeo -->
+      <article data-product-page="hardware/placa-video.html">
+        <img src="https://hardwaretimes.com/wp-content/uploads/2022/09/NVIDIA-GeForce-RTX-4090-Graphics-Card-_1-low_res-scale-4_00x-Custom.png" alt="Placa de Vídeo RTX 4090" />
+        <h3>Placa de Vídeo RTX 4090</h3>
+        <p>Ray tracing em alta fidelidade para 4K com taxa elevada de FPS.</p>
+        <ul>
+          <li>24 GB GDDR6X</li>
+          <li>Suporta DLSS 3</li>
+          <li>6 conectores DisplayPort/HDMI</li>
+        </ul>
+        <div class="button-gap">
+          <button type="button">Comprar</button>
+          <button type="button" title="Adicionar ao carrinho"><i class="fas fa-shopping-cart"></i></button>
+        </div>
+      </article>
+      <!-- Memória -->
+      <article data-product-page="hardware/memoria.html">
+        <img src="https://m.media-amazon.com/images/I/61D2DDpDITL._AC_SL1500_.jpg" alt="Memória DDR5 32GB" />
+        <h3>Memória DDR5 (2x16GB)</h3>
+        <p>Frequência alta e baixa latência para multitarefa pesada.</p>
+        <ul>
+          <li>6000 MHz</li>
+          <li>CL30</li>
+          <li>XMP compatível</li>
+        </ul>
+        <div class="button-gap">
+          <button type="button">Comprar</button>
+          <button type="button" title="Adicionar ao carrinho"><i class="fas fa-shopping-cart"></i></button>
+        </div>
+      </article>
+      <!-- SSD NVMe -->
+      <article data-product-page="hardware/ssd.html">
+        <img src="https://th.bing.com/th/id/R.ed782a9ae5beb6ee86650d3df56b8074?rik=86RDPxm%2bmbaZFQ&pid=ImgRaw&r=0" alt="SSD NVMe 1TB" />
+        <h3>SSD NVMe 1TB</h3>
+        <p>Carregamento rápido de jogos, programas, arquivos e sistemas operacionais.</p>
+        <ul>
+          <li>Leitura 7000 MB/s</li>
+          <li>Gravação 5000 MB/s</li>
+          <li>Form factor M.2</li>
+        </ul>
+        <div class="button-gap">
+          <button type="button">Comprar</button>
+          <button type="button" title="Adicionar ao carrinho"><i class="fas fa-shopping-cart"></i></button>
+        </div>
+      </article>
+      <!-- Placa-Mãe -->
+      <article data-product-page="hardware/placa-mae.html">
+        <img src="https://images3.kabum.com.br/produtos/fotos/165133/placa-mae-asus-tuf-gaming-a520m-plus-ii-amd-am4-matx-ddr4-preto-90mb17g0-m0eay0_1736968906_gg.jpg" alt="Placa-Mãe A520M-PLUS" />
+        <h3>Placa-Mãe A520M-PLUS</h3>
+        <p>Desenhada para AMD Ryzen, arquitetura otimizada para alta performance.</p>
+        <ul>
+          <li>Socket AMD AM4</li>
+          <li>mATX</li>
+          <li>DDR4</li>
+        </ul>
+        <div class="button-gap">
+          <button type="button">Comprar</button>
+          <button type="button" title="Adicionar ao carrinho"><i class="fas fa-shopping-cart"></i></button>
+        </div>
+      </article>
+      <!-- Fonte -->
+      <article data-product-page="hardware/fonte.html">
+        <img src="https://images8.kabum.com.br/produtos/fotos/369658/fonte-msi-mag-a650bn-atx-650w-80-plus-bronze-pfc-ativo-entrada-bivolt-preto-306-7zp2b22-ce0_1665770994_gg.jpg" alt="Fonte MSI 650W" />
+        <h3>Fonte MSI 650W</h3>
+        <p>Arquitetura de 650W com PFC Ativo para performance superior.</p>
+        <ul>
+          <li>650W</li>
+          <li>PFC Ativo</li>
+          <li>80 Plus Bronze</li>
+        </ul>
+        <div class="button-gap">
+          <button type="button">Comprar</button>
+          <button type="button" title="Adicionar ao carrinho"><i class="fas fa-shopping-cart"></i></button>
+        </div>
+      </article>
+    </section>
+
+    <section id="diferenciais">
+      <h2>Diferenciais</h2>
+      <ul>
+        <li>Garantia estendida</li>
+        <li>Frete grátis acima de R$ 499</li>
+        <li>Montagem personalizada</li>
+        <li>Atendimento via chat em tempo real</li>
+      </ul>
+    </section>
+    <!-- Contato -->
+    <section id="contato">
+      <h2>Contato</h2>
+      <p><b>Email:</b> suporte@overclocktech.com.br</p>
+      <p><b>Telefone:</b> (11) 4000-1234</p>
+      <!-- Formulário de Contato -->
+      <form action="#" method="post">
+        <div>
+          <label for="nome">Nome completo</label>
+          <input id="nome" name="nome" type="text" placeholder="João da Silva" required />
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="joao@email.com" required />
+        </div>
+        <div>
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem aqui..." required></textarea>
+        </div>
+        <button type="submit"><i class="fa-solid fa-envelope"></i> Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <script>
+    document.querySelectorAll('article[data-product-page]').forEach(article => {
+      article.style.cursor = 'pointer';
+      article.addEventListener('click', () => {
+        window.location.href = article.dataset.productPage;
+      });
+    });
+  </script>
+  <footer>
+    <p>&copy; 2026 Overclock Tech. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
