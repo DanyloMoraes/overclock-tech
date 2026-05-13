@@ -4,6 +4,8 @@
 
 Projeto pessoal baseado no conteúdo aprendido após a finalização da **Masterclass: Do zero ao primeiro website com IA** da Alura. O objetivo foi criar uma landing page de e-commerce moderna, com foco em alta performance e estética gamer.
 
+[:rocket: Confira o resultado final](https://danylomoraes.github.io/overclock-tech/)
+
 ### Tecnologias e Ferramentas
 
 - **Editor de Código:** Visual Studio Code
