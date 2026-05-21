@@ -374,8 +374,7 @@ textarea {
 input:focus,
 textarea:focus {
   outline: none;
-  border-color: #ff006e;
-  box-shadow: 0 0 10px rgba(255, 0, 110, 0.3);
+  border-color: #00d4ff;
 }
 
 /* Botões */
