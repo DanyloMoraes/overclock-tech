@@ -220,9 +220,10 @@ article h3 {
   font-size: 1.35rem;
   color: #e5ecf4;
   margin-bottom: 12px;
-  margin-top: 18px;
   margin-left: 22px;
   margin-right: 22px;
+  line-height: 1.0;
+  margin-top: 1.6em;
 }
 
 article p {
@@ -277,10 +278,12 @@ article button {
   height: auto;
   max-height: 550px;
   object-fit: cover;
+  border-radius: inherit;
+  margin: 2.1em;
 }
 
 #produto .produto-detalhes {
-  padding: 2em 1.5em 3em;
+  padding: 0 1.5em 3em;
 }
 
 #produto .produto-detalhes ul {
