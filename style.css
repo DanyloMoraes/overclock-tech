@@ -194,6 +194,8 @@ article {
   overflow: hidden;
   max-width: 320px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 article img {
@@ -229,15 +231,6 @@ article p {
   font-size: 0.95rem;
   margin-left: 22px;
   margin-right: 22px;
-}
-
-.product-description {
-  text-overflow: ellipsis;
-  overflow-wrap: normal;
-  word-break: normal;
-  line-height: 1.75em;
-  height: 4em;
-  overflow: hidden;
 }
 
 article ul {
@@ -411,6 +404,7 @@ button:active {
 .button-gap {
   display: flex;
   justify-content: flex-end;
+  margin-top: auto;
 }
 
 form button {
