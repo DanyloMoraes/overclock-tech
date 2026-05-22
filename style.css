@@ -399,10 +399,6 @@ button:hover {
   box-shadow: 0 6px 18px rgba(16, 32, 52, 0.18);
 }
 
-button:active {
-  transform: scale(0.98);
-}
-
 .button-gap {
   display: flex;
   justify-content: flex-end;
