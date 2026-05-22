@@ -427,6 +427,17 @@ footer {
   font-size: 0.9rem;
 }
 
+.nav-link--disable {
+  color: #6b6b6b;
+  cursor: default;
+  border-bottom: none;
+}
+
+.nav-link--disable:hover {
+  color: #6b6b6b;
+  border-bottom: none;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
   header h1 {
