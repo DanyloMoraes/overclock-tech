@@ -262,6 +262,85 @@ section h2 {
   margin-bottom: 30px;
 }
 
+#produtos .product-categories {
+  margin-top: 40px;
+}
+
+#produtos .product-categories h3 {
+  font-size: 1.5rem;
+  color: #d8dee9;
+  margin-bottom: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.product-category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 20px;
+}
+
+.category-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 18px;
+  background: #0f1720;
+  border: 1px solid rgba(142, 168, 191, 0.12);
+  border-radius: 18px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.18);
+  border-color: rgba(142, 168, 191, 0.25);
+}
+
+.category-card__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #0d355f 0%, #18496f 100%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #e9eff5;
+  font-size: 1.2rem;
+}
+
+.category-card h4 {
+  font-size: 1rem;
+  color: #e5ecf4;
+  margin: 0;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+.category-card p {
+  color: #9ab0c8;
+  font-size: 0.92rem;
+  margin: 0;
+  line-height: 1.5;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+.category-card__badge {
+  margin-top: auto;
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(0, 212, 255, 0.12);
+  color: #8ad4ff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: none;
+}
+
 li.splide__slide {
   display: flex;
   flex: 0 0 20% !important;
