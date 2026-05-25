@@ -22,20 +22,23 @@
           <li><a href="#">Escritório</a></li>
           <li><a href="#">Blog Overclock</a></li>
         </ul>
-        <button class="cart-button" type="button">
-          <i class="fas fa-shopping-cart"></i>
-          <span class="cart-count">1</span>
-        </button>
+        <div class="cart-widget">
+          <button class="cart-button" type="button" aria-expanded="false" aria-controls="cart-preview">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">1</span>
+          </button>
+          <div class="cart-card" id="cart-preview" role="region" aria-label="Resumo do carrinho">
+            <div class="cart-card__item">
+              <div>
+                <p class="cart-card__title">Processador Ryzen 9</p>
+                <p class="cart-card__meta">1 unidade • R$ 3.499</p>
+              </div>
+              <button type="button" class="cart-card__remove" aria-label="Remover item do carrinho">×</button>
+            </div>
+            <a href="#" class="cart-card__link">Ir para o carrinho</a>
+          </div>
+        </div>
       </nav>
-    </div>
-  </header>
-
-  <nav class="breadcrumb-container">
-    <ul class="breadcrumb">
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="#">Hardware</a></li>
-      <li class="active">Gabinete Corsair 4000D</li>
-    </ul>
   </nav>
 
   <main>
@@ -65,6 +68,38 @@
     </section>
   </main>
 
+  <script>
+    const cartButton = document.querySelector('.cart-button');
+    const cartCard = document.querySelector('.cart-card');
+    const cartRemove = document.querySelector('.cart-card__remove');
+    const cartCount = document.querySelector('.cart-count');
+
+    cartButton.addEventListener('click', event => {
+      event.stopPropagation();
+      const isOpen = cartCard.classList.toggle('is-visible');
+      cartButton.setAttribute('aria-expanded', isOpen);
+    });
+
+    cartRemove.addEventListener('click', event => {
+      event.stopPropagation();
+      const itemRow = event.target.closest('.cart-card__item');
+      if (itemRow) {
+        itemRow.remove();
+        cartCount.textContent = '0';
+        const emptyMessage = document.createElement('p');
+        emptyMessage.className = 'cart-card__empty';
+        emptyMessage.textContent = 'Carrinho vazio.';
+        cartCard.appendChild(emptyMessage);
+      }
+    });
+
+    document.addEventListener('click', event => {
+      if (!cartCard.contains(event.target) && !cartButton.contains(event.target)) {
+        cartCard.classList.remove('is-visible');
+        cartButton.setAttribute('aria-expanded', 'false');
+      }
+    });
+  </script>
   <footer>
     <p>&copy; 2026 Overclock Tech. Todos os direitos reservados.</p>
   </footer>

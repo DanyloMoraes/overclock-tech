@@ -77,6 +77,12 @@ header nav a:hover {
   text-align: center;
 }
 
+.cart-widget {
+  position: relative;
+  display: inline-flex;
+  margin-left: auto;
+}
+
 .cart-button {
   display: inline-flex;
   align-items: center;
@@ -96,6 +102,97 @@ header nav a:hover {
 .cart-button:hover {
   background: #5c7189;
   transform: scale(1.02);
+}
+
+.cart-card {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 14px);
+  width: 280px;
+  background: #17212b;
+  border: 1px solid rgba(142, 168, 191, 0.18);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.28);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+  z-index: 20;
+}
+
+.cart-card.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.cart-card__item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(142, 168, 191, 0.12);
+}
+
+.cart-card__title {
+  font-weight: 700;
+  color: #e5ecf4;
+  margin-bottom: 6px;
+}
+
+.cart-card__meta {
+  font-size: 0.95rem;
+  color: #9ab0c8;
+}
+
+.cart-card__remove {
+  width: 34px;
+  height: 34px;
+  min-width: 34px;
+  min-height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background: #2f3c4e;
+  color: #f5f8fb;
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.25s ease;
+  padding: 1em;
+}
+
+.cart-card__remove:hover {
+  background: #46586f;
+}
+
+.cart-card__link {
+  display: inline-block;
+  width: 100%;
+  margin-top: 14px;
+  text-align: center;
+  color: #d8e8ff;
+  text-decoration: none;
+  background: #1f2a3a;
+  padding: 12px 0;
+  border-radius: 10px;
+  border: 1px solid rgba(142, 168, 191, 0.14);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.cart-card__link:hover {
+  background: #2f3d52;
+}
+
+.cart-card__empty {
+  margin-top: 14px;
+  color: #9ab0c8;
+  font-size: 0.95rem;
+  text-align: center;
 }
 
 .cart-button i {
