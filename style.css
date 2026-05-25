@@ -654,6 +654,11 @@ footer {
   margin-left: 12px;
   color: #5a7086;
 }
+@media (max-width: 1160px) {
+  #diferenciais {
+    display: none;
+  }
+}
 
 /* Responsividade */
 @media (max-width: 768px) {
