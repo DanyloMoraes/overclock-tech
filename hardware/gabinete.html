@@ -12,6 +12,7 @@
     <div class="header-container">
       <h1>Overclock Tech</h1>
       <p>O melhor em componentes para PC gamer</p>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Mudar para tema claro"><span id="icon-toggle">🌙</span> dark</button>
       <nav>
         <ul>
           <li><a href="../index.html">Home</a></li>
@@ -98,6 +99,23 @@
         cartCard.classList.remove('is-visible');
         cartButton.setAttribute('aria-expanded', 'false');
       }
+    });
+
+    const themeToggle = document.getElementById('theme-toggle');
+    const bodyElement = document.body;
+
+    const savedTheme = localStorage.getItem('siteTheme');
+    if (savedTheme === 'light') {
+      bodyElement.classList.add('light-theme');
+      themeToggle.textContent = '☀️ light';
+      themeToggle.setAttribute('aria-label', 'Mudar para tema escuro');
+    }
+
+    themeToggle.addEventListener('click', () => {
+      const isLight = bodyElement.classList.toggle('light-theme');
+      themeToggle.textContent = isLight ? '☀️ light' : '🌙 dark';
+      themeToggle.setAttribute('aria-label', isLight ? 'Mudar para tema escuro' : 'Mudar para tema claro');
+      localStorage.setItem('siteTheme', isLight ? 'light' : 'dark');
     });
   </script>
   <footer>
