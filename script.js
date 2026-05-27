@@ -65,13 +65,13 @@ function handleThemeToggle() {
   const savedTheme = localStorage.getItem('siteTheme');
   if (savedTheme === 'light') {
     bodyElement.classList.add('light-theme');
-    themeToggle.textContent = '☀️ light';
+    themeToggle.textContent = '🌙 dark';
     themeToggle.setAttribute('aria-label', 'Mudar para tema escuro');
   }
 
   themeToggle.addEventListener('click', () => {
     const isLight = bodyElement.classList.toggle('light-theme');
-    themeToggle.textContent = isLight ? '☀️ light' : '🌙 dark';
+    themeToggle.textContent = isLight ? '🌙 dark' : '☀️ light';
     themeToggle.setAttribute('aria-label', isLight ? 'Mudar para tema escuro' : 'Mudar para tema claro');
     localStorage.setItem('siteTheme', isLight ? 'light' : 'dark');
   });
