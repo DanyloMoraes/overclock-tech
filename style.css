@@ -80,7 +80,7 @@ header nav a:hover {
 
 .theme-toggle {
   position: absolute;
-  right: 20px;
+  right: 0px;
   top: 24px;
   width: 9em;
   height: 46px;
@@ -377,6 +377,46 @@ body.light-theme form button {
 
 body.light-theme form button:hover {
   background: #2563eb;
+}
+
+/* Accessibility: improve contrast for key sections in light theme */
+body.light-theme #home {
+  background: #ffffff;
+  color: #0f172a;
+}
+
+body.light-theme #home h2,
+body.light-theme #produtos h2,
+body.light-theme #hardware h2,
+body.light-theme #computadores h2,
+body.light-theme #perifericos h2,
+body.light-theme #escritorio h2 {
+  color: #0f172a;
+  border-left-color: #cbd5e1;
+}
+
+body.light-theme #produtos .product-categories h3 {
+  color: #0f172a;
+}
+
+body.light-theme #diferenciais,
+body.light-theme #diferenciais * {
+  color: #0f172a;
+}
+
+body.light-theme #diferenciais li {
+  background: #ffffff;
+  border-left-color: #cbd5e1;
+  color: #0f172a;
+}
+
+body.light-theme #contato,
+body.light-theme #contato * {
+  color: #0f172a;
+}
+
+body.light-theme #contato p {
+  color: #475569;
 }
 
 /* Main */
