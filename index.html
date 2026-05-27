@@ -379,92 +379,9 @@
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-  <script>
-    document.querySelectorAll('article[data-product-page]').forEach(article => {
-      article.style.cursor = 'pointer';
-      article.addEventListener('click', event => {
-        if (event.target.closest('button')) {
-          return;
-        }
-        window.location.href = article.dataset.productPage;
-      });
-    });
-
-    const cartButton = document.querySelector('.cart-button');
-    const cartCard = document.querySelector('.cart-card');
-    const cartRemove = document.querySelector('.cart-card__remove');
-    const cartCount = document.querySelector('.cart-count');
-    const themeToggle = document.getElementById('theme-toggle');
-    const bodyElement = document.body;
-
-    const savedTheme = localStorage.getItem('siteTheme');
-    if (savedTheme === 'light') {
-      bodyElement.classList.add('light-theme');
-      themeToggle.textContent = '☀️ light';
-      themeToggle.setAttribute('aria-label', 'Mudar para tema escuro');
-    }
-
-    themeToggle.addEventListener('click', () => {
-      const isLight = bodyElement.classList.toggle('light-theme');
-      themeToggle.textContent = isLight ? '☀️ light' : '🌙 dark';
-      themeToggle.setAttribute('aria-label', isLight ? 'Mudar para tema escuro' : 'Mudar para tema claro');
-      localStorage.setItem('siteTheme', isLight ? 'light' : 'dark');
-    });
-
-    cartButton.addEventListener('click', event => {
-      event.stopPropagation();
-      const isOpen = cartCard.classList.toggle('is-visible');
-      cartButton.setAttribute('aria-expanded', isOpen);
-    });
-
-    cartRemove.addEventListener('click', event => {
-      event.stopPropagation();
-      const itemRow = event.target.closest('.cart-card__item');
-      if (itemRow) {
-        itemRow.remove();
-        cartCount.textContent = '0';
-        const emptyMessage = document.createElement('p');
-        emptyMessage.className = 'cart-card__empty';
-        emptyMessage.textContent = 'Carrinho vazio.';
-        cartCard.appendChild(emptyMessage);
-      }
-    });
-
-    document.addEventListener('click', event => {
-      if (!cartCard.contains(event.target) && !cartButton.contains(event.target)) {
-        cartCard.classList.remove('is-visible');
-        cartButton.setAttribute('aria-expanded', 'false');
-      }
-    });
-
-    document.addEventListener('DOMContentLoaded', () => {
-      new Splide('#product-splide', {
-        type: 'slide',
-        perPage: 3,
-        perMove: 1,
-        gap: '24px',
-        rewind: true,
-        pagination: false,
-        arrows: true,
-        breakpoints: {
-          1024: {
-            perPage: 2,
-          },
-          768: {
-            perPage: 1,
-          },
-        },
-      }).mount();
-    });
-  </script>
+  <script src="script.js"></script>
   <footer>
     <p>&copy; 2026 Overclock Tech. Todos os direitos reservados.</p>
   </footer>
 </body>
 </html>
-
-
-
-
-
-
