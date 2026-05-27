@@ -346,6 +346,39 @@ body.light-theme .theme-toggle:hover {
   background: #6ba1e9;
 }
 
+/* Form adjustments for light theme */
+body.light-theme form {
+  background: #ffffff;
+  border-color: rgba(148, 163, 184, 0.35);
+}
+
+body.light-theme label {
+  color: #0f172a;
+}
+
+body.light-theme input,
+body.light-theme textarea {
+  background-color: #ffffff;
+  color: #0f172a;
+  border: 2px solid rgba(148, 163, 184, 0.6);
+}
+
+body.light-theme input:focus,
+body.light-theme textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: none;
+}
+
+body.light-theme form button {
+  background: #1d4ed8;
+  color: #ffffff;
+}
+
+body.light-theme form button:hover {
+  background: #2563eb;
+}
+
 /* Main */
 main {
   max-width: 1800px;
