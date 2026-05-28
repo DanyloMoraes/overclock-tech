@@ -428,7 +428,7 @@ main {
 
 /* Sections */
 section {
-  margin-bottom: 60px;
+  margin: 40px auto 60px;
   scroll-margin-top: 100px;
 }
 
@@ -462,7 +462,7 @@ section h2 {
 
 /* Produtos Section */
 #produtos {
-  margin-top: -10px;
+  margin: -10px 20px;
 }
 
 #produtos h2 {
@@ -620,12 +620,81 @@ li.splide__slide {
   width: 100%;
 }
 
-.splide__arrow--prev {
+/* .splide__arrow--prev {
   left: -2.5em!important;
 }
 
 .splide__arrow--next {
   right: -3.5em!important;
+} */
+
+/* Responsividade para o carrossel */
+@media (max-width: 1800px) {
+  li.splide__slide {
+    flex: 0 0 20% !important;
+    max-width: 50% !important;
+    width: 20% !important;
+  }
+}
+
+@media (max-width: 1400px) {
+  li.splide__slide {
+    flex: 0 0 25% !important;
+    max-width: 25% !important;
+    width: 25% !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  li.splide__slide {
+    flex: 0 0 33.333% !important;
+    max-width: 33.333% !important;
+    width: 33.333% !important;
+  }
+
+  .splide__arrow--prev {
+    left: -1.8em!important;
+  }
+
+  .splide__arrow--next {
+    right: -2.2em!important;
+  }
+}
+
+@media (max-width: 768px) {
+  li.splide__slide {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    width: 50% !important;
+  }
+
+  .splide__arrow--prev {
+    left: -1.2em!important;
+  }
+
+  .splide__arrow--next {
+    right: -1.6em!important;
+  }
+}
+
+@media (max-width: 480px) {
+  li.splide__slide {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  article {
+    max-width: 100%;
+  }
+
+  .splide__arrow--prev {
+    left: 0em!important;
+  }
+
+  .splide__arrow--next {
+    right: 0em!important;
+  }
 }
 
 article {
